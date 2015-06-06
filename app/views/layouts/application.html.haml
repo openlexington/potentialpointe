@@ -8,11 +8,7 @@
       = csrf_meta_tags
   %body.photo-uploader
     %section#wrapper
-      #carbonads-container
-        .carbonad
-          #azcarbon
-          :javascript
-            var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/14060/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);      %header
+      %header
         %h1 Drag and drop, automatic upload
       :css
         #holder { border: 10px dashed #ccc; width: 300px; min-height: 300px; margin: 20px auto;}
@@ -82,8 +78,7 @@
         
             reader.readAsDataURL(file);
           }  else {
-            holder.innerHTML += '
-                                        Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
+            holder.innerHTML += 'Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
             console.log(file);
           }
         }
@@ -133,8 +128,8 @@
         }
         
         
-                                              %a#html5badge{:href => "http://www.w3.org/html/logo/"}
-        %img{:alt => "HTML5 Powered with Connectivity / Realtime, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage", :height => "64", :src => "http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-device-graphics-multimedia-performance-semantics-storage.png", :title => "HTML5 Powered with Connectivity / Realtime, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage", :width => "325"}
+      %a#html5badge{:href => "http://www.w3.org/html/logo/"}
+      %img{:alt => "HTML5 Powered with Connectivity / Realtime, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage", :height => "64", :src => "http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-device-graphics-multimedia-performance-semantics-storage.png", :title => "HTML5 Powered with Connectivity / Realtime, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage", :width => "325"}
       %footer
         %a{:href => "/"}> HTML5 demos
         \/
@@ -144,11 +139,3 @@
     %a{:href => "http://github.com/remy/html5demos"}
       %img{:alt => "Fork me on GitHub", :src => "http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png", :style => "position: absolute; top: 0; left: 0; border: 0;"}/
     %script{:src => "js/prettify.packed.js"}
-    :javascript
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    :javascript
-      try {
-      var pageTracker = _gat._getTracker("UA-1656750-18");
-      pageTracker._trackPageview();
-      } catch(err) {}    = yield
